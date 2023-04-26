@@ -1,0 +1,33 @@
+mixin modal 
+  .modal.hidden
+   form.location-search__form
+    .wrapper 
+      ion-icon.icon(name='search-outline')
+      input.location-search__input(autocomplete="off" type="text" placeholder="Where to?" value="")
+
+    .location-search__suggestion
+      .suggestion__category Recommended
+      .suggestion__item
+        ion-icon.icon(name='location-outline')
+        .wrapper-suggestion
+          p.suggestion__item--title.suggestion__item--strong Tokyo
+          p.suggestion__item--sub Tokyo prefecture, Japan 
+      .suggestion__item
+        ion-icon.icon(name='location-outline')
+        .wrapper-suggestion
+          p.suggestion__item--title.suggestion__item--strong Kyoto
+          p.suggestion__item--sub Kyoto prefecture, Japan 
+      .suggestion__item
+        ion-icon.icon(name='location-outline')
+        .wrapper-suggestion
+          p.suggestion__item--title.suggestion__item--strong Osaka
+          p.suggestion__item--sub Osaka prefecture, Japan 
+     
+      
+        
+    
+    
+    
+    
+
+  .overlay.hidden

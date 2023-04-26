@@ -1,0 +1,84 @@
+.skeleton {
+  animation: skeleton-loading 1.5s linear infinite alternate;
+  width: 100%;
+  height: 100%;
+  &--text {
+    width: 100%;
+    height: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  &--text:last-child {
+    margin-bottom: 0;
+    width: 80%;
+  }
+}
+
+.skeleton--container {
+  display: flex;
+  align-items: flex-start !important;
+}
+
+.mapboxgl-popup__text .skeleton--text {
+  height: 1rem;
+}
+
+.skeleton__text--big {
+  height: 3rem;
+  width: 80%;
+  margin-bottom: 2rem !important;
+}
+
+.listing__info {
+  .skeleton--text {
+    height: 1.5rem;
+  }
+  .skeleton--text:nth-child(1) {
+    width: 30%;
+    height: 1rem;
+  }
+  .skeleton--text:nth-child(2) {
+    width: 40%;
+    margin-bottom: 3rem;
+    height: 1rem;
+  }
+  .skeleton--text:nth-child(3) {
+    width: 90%;
+  }
+  .skeleton--text:nth-child(4) {
+    width: 95%;
+  }
+
+  .skeleton--text:nth-child(5) {
+    width: 70%;
+  }
+  .skeleton--text:nth-child(6) {
+    width: 40%;
+    margin-top: auto;
+    height: 1rem;
+  }
+}
+
+.listing-price {
+  .skeleton--text:nth-child(1) {
+    height: 4rem;
+  }
+  .skeleton--text:nth-child(2) {
+    height: 1rem;
+    width: 70%;
+  }
+}
+
+.skeleton__img {
+  border-radius: 1rem;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: $color-grey-light-3;
+  }
+  100% {
+    background-color: $color-grey-dark-1;
+  }
+}

@@ -1,0 +1,50 @@
+include ./../utils/_loadingSpinner
+
+section.popular-destinations
+  .big-card__wrapper
+    .big-card
+      figure
+        img.big-card__img.skeleton(src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1794&q=80' alt='Tokyo image')
+      .big-card__content
+        h2.heading-secondary.big-card__content--header
+          | Kick back in Tokyo
+        p.big-card__content--text
+          | From Shinjuku to Asakusa, experience the best of the Japanese capital
+          | with these iconic attractions
+        button.btn.btn--white
+          a.big-card__content--link(href='#')
+          | Find out more
+  .small-card
+    .small-card__header--container
+      div
+        h2.heading-secondary
+          | Activities you might be interested in
+        p Other travellers are loving these!
+      button.btn.btn--frame
+        a.small-card__header--link(href='#') See all interests
+    
+    .gallery-container
+      .gallery
+        a.gallery__item(href='#')
+          +_loadingSpinner
+          //- figcaption.gallery__item--description
+          //-   ion-icon(name='location-outline')
+          //-   span.gallery__item--location Tokyo
+        a.gallery__item(href='#')
+          +_loadingSpinner
+          
+        a.gallery__item(href='#')
+          +_loadingSpinner
+          
+        a.gallery__item(href='#')
+          +_loadingSpinner
+          
+        a.gallery__item(href='#')
+          +_loadingSpinner
+        
+        a.gallery__item(href='#')
+          +_loadingSpinner
+
+        a.gallery__item(href='#')
+          +_loadingSpinner
+          

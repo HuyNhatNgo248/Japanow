@@ -1,0 +1,24 @@
+.circle-rating--container {
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.circle-rating {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: solid 1px $color-green;
+
+  &--full {
+    background-color: $color-green;
+  }
+
+  &--half {
+    background: linear-gradient(
+      to right,
+      $color-green 50%,
+      $color-primary-white 50%
+    );
+  }
+}

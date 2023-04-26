@@ -1,0 +1,43 @@
+
+
+
+doctype html 
+html 
+  head 
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      title Japanow #{title}
+
+      link(href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet')
+
+      script(defer='', type='module', src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+
+      script(defer='', nomodule='', src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+
+      script(src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js')
+
+
+
+      link(rel='shortcut icon' type='image/png' href='/img/favicon.ico')
+
+      link(href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet')
+
+      script(defer src='https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js')
+
+
+      link(rel='stylesheet' href='/style.css')
+      script(defer src='/bundleJS/bundle.js')
+
+
+
+  body
+
+    // CONTENT
+    block content   
+      
+    
+    
+
+    //FOOTER 
+    include _footer

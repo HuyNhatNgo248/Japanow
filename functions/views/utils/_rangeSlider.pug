@@ -1,0 +1,28 @@
+mixin rangeSlider(min, max, id)
+  .range-slider
+    .slider__values 
+      if id === "price"
+        .slider__value
+          span.slider__value--unit $
+          span.slider__value--amt= min
+        | &nbsp; - &nbsp;
+        .slider__value
+          span.slider__value--unit $
+          span.slider__value--amt= max
+
+      if id === "distance-from"
+        .slider__value
+          span.slider__value--amt= max
+          | &nbsp;
+          span.slider__value--unit km
+
+    .slider__container(data-id= id)
+      .slider__track
+      
+      if id==="price"
+        input#min-price-slider.slider.slider-1(type='range', min=`${min}`, max=`${max}`, value=`${min}`)
+        input#max-price-slider.slider.slider-2(type='range', min=`${min}`, max=`${max}`, value=`${max}`)
+      
+      if id ==="distance-from"
+        input.slider.slider-1(type='range', min=`${min}`, max=`${max}`, value=`${max}`)
+

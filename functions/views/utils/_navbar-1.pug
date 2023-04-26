@@ -1,0 +1,66 @@
+include ./../utils/_dropdown
+include ./../utils/_searchBarTop
+
+
+mixin option(location, text)
+  span.dropdown--options.option 
+    span.dropdown--options__location= location 
+    | 
+    span.dropdown--options__text= text
+
+
+nav.nav-bar-1
+  div.nav-bar-1__container
+    ul.nav-bar-1__top
+      li.nav-bar-1__item--logo
+        a.nav-bar-1__item--link(href="/") Japanow
+      +searchBarTop
+
+      li(class=`nav-bar-1__item--like`)
+        a.nav-bar-1__item--link(href="#")
+          ion-icon.icon.nav-bar-1__item--icon(name=`heart-outline`)
+          p.nav-bar-1__item--text Trips
+
+      li(class=`nav-bar-1__item--alarm`)
+        a.nav-bar-1__item--link(href="#")
+          ion-icon.icon.nav-bar-1__item--icon(name=`alarm-outline`)
+          p.nav-bar-1__item--text Alert
+
+
+      li.nav-bar-1__item--profile-pic
+        a.nav-bar-1__item--link(href="#")
+          img.nav-bar-1__item--user-img(src="/img/profile-pic.jpeg")
+
+      li(class=`nav-bar-1__item--cart`)
+        a.nav-bar-1__item--link(href="#")
+          ion-icon.icon.nav-bar-1__item--icon(name=`cart-outline`)
+          p.nav-bar-1__item--text Cart
+
+
+
+
+
+  div.nav-bar-1__container
+    ul.nav-bar-1__bottom 
+      .dropdown
+        button.btn.btn--dropdown
+          span.btn__text Tokyo
+        .dropdown--content
+          +option("Tokyo", "tourism")
+          +option("Tokyo", "hotels")
+          +option("Tokyo", "restaurants")
+          +option("Tokyo", "travel guide")
+
+
+      li(class=`nav-bar-1__item--things-to-do`)
+        a.nav-bar-1__item--link(href="#") Things to do
+      li(class=`nav-bar-1__item--restaurants`)
+        a.nav-bar-1__item--link(href="#") Restaurants
+      li(class=`nav-bar-1__item--shopping`)
+        a.nav-bar-1__item--link(href="#") Shopping
+      li(class=`nav-bar-1__item--travel-stories`)
+        a.nav-bar-1__item--link(href="#") Travel stories
+
+      li.nav-bar-1__item--more
+        a.nav-bar-1__item--link(href="#")
+          ion-icon.icon.nav-bar-1__item--icon(name='ellipsis-horizontal')

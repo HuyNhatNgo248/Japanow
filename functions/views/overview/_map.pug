@@ -1,0 +1,63 @@
+include ./../utils/_loadingSpinner
+include ./../utils/_loadingSkeleton
+include ./../utils/_loadingGif
+
+mixin _menu-bar__item(text, icon, className="") 
+  li(class=`menu-bar__item ${className}`)
+    a.menu-bar__item--link(href='#')
+      p.menu-bar__item--text= text
+      ion-icon.icon.icon--menu-bar(name=`${icon}-outline`)
+
+
+
+section.map 
+  ul.menu-bar
+    +_menu-bar__item('Hotels', 'bed', "display-modal")
+    +_menu-bar__item('Things to do', 'ticket')
+    +_menu-bar__item('Travel Stories', 'earth')
+    +_menu-bar__item('More', 'ellipsis-horizontal')
+    
+
+  h2.heading-secondary.heading-secondary--big
+    p Explore 
+    p Japan
+
+  .map-display
+    .map-info 
+      ul.map-info__list
+        .map-info__item
+          //- +loadingSpinner
+          +GIF_pikachu('https://i.gifer.com/2iiJ.gif')
+        .map-info__item
+          //- +loadingSpinner
+
+          +GIF_pikachu('https://media.giphy.com/media/smJ0MPiZfIojm/giphy.gif')
+        .map-info__item
+          //- +loadingSpinner
+
+          +GIF_pikachu('https://media.giphy.com/media/hoQLrSqAL3mV2/giphy.gif')
+        .map-info__item
+          //- +loadingSpinner
+
+          +GIF_pikachu('https://media.giphy.com/media/124rIiBX0Kh5Cw/giphy.gif')
+        .map-info__item
+          //- +loadingSpinner
+
+          +GIF_pikachu('https://media.giphy.com/media/NgtnjHlmMpbJUyM0ko/giphy.gif')
+        .map-info__item
+          //- +loadingSpinner
+
+          +GIF_pikachu('https://media.giphy.com/media/J5XzvGAzLKHbtO7zvI/giphy.gif')
+        .map-info__item
+          //- +loadingSpinner
+
+          +GIF_pikachu('https://media.giphy.com/media/3uKw2QfFkJ6zyvD5cU/giphy.gif')
+
+    #map
+      +_loadingSpinner
+
+      
+
+
+
+

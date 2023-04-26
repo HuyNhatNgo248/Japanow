@@ -1,0 +1,8 @@
+mixin checkbox(items)
+  each val in items
+    label.checkbox__container
+      .wrapper
+        input(type='checkbox')
+        span.checkmark
+      span= val
+  

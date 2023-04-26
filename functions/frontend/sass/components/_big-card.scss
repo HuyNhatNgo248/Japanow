@@ -1,0 +1,68 @@
+.big-card__wrapper {
+  background-color: $color-primary-black;
+  padding: 12rem 0;
+  margin-bottom: 12rem;
+}
+
+.big-card {
+  border-radius: 1.5rem;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+
+  &__img {
+    display: block;
+    height: 50rem !important;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+    transition-delay: 0.3s;
+    transition-property: transform;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__content {
+    color: $color-primary-white;
+    position: absolute;
+    width: 35%;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+
+    &--header {
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    &--text {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60%;
+    background: linear-gradient(
+      to right,
+      rgba($color-primary-black, 0.7),
+      transparent
+    );
+    clip-path: polygon(0 0, 69% 0, 100% 100%, 0% 100%);
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+  }
+
+  .btn--white {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 1rem;
+  }
+}

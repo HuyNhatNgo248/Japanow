@@ -1,0 +1,11 @@
+mixin dropdown(extraClassName, btnName, displayIcon, content)
+  div(class=`dropdown ${extraClassName}`)
+    button.btn.btn--dropdown
+      span= btnName
+      if displayIcon
+        ion-icon.icon-dropdown(name='chevron-down-outline')
+    .dropdown--content
+      span.dropdown--options.active= content[0]
+      - let len = content.length
+      - for (let i = 1; i < len; i++) 
+        span.dropdown--options.option= content[i]

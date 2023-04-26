@@ -1,0 +1,26 @@
+header.header
+  //- .bg-video
+  //-   video.bg-video__content(muted='')
+  //-     source(src='/img/bg-video.mp4' type='video/mp4')
+  //-     source(src='/img/bg-video.webm' type='video/webm')
+  //-     | Your browser is not supported
+  img.header-background(src="https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="background image kyoto")
+  .navigation
+    a.navigation__logo(href="/") Japanow
+   
+    ul.navigation__list.navigation__list--users-login
+      li.navigation__item
+        a.navigation__item--link(href='#') Register
+      li.navigation__item
+        a.navigation__item--link(href='#') Sign in
+  .heading-primary
+    h1.heading-primary--main Let the journey begin
+
+    
+    button.btn.btn__cta.display-modal(href='#')
+      span Hotels Search
+      ion-icon.icon.icon--cta(name='bed-outline')
+
+  .mountain-background
+    svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 1440 320')
+      path(fill='rgb(253, 253, 253)', fill-opacity='1', d='M0,160L40,138.7C80,117,160,75,240,96C320,117,400,203,480,197.3C560,192,640,96,720,80C800,64,880,128,960,138.7C1040,149,1120,107,1200,96C1280,85,1360,107,1400,117.3L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z')

@@ -1,0 +1,75 @@
+footer {
+  user-select: none;
+  margin-top: $margin-section;
+  background-color: $color-primary-black;
+  color: $color-primary-white;
+
+  .footer__text {
+    font-size: 1.6rem;
+    text-align: center;
+    padding-bottom: 3rem;
+    color: $color-grey-dark-1;
+  }
+}
+
+.footer {
+  display: grid;
+  width: 100%;
+  padding: 15rem 20rem 0 20rem;
+  grid-template-columns: 30% 25% 25% 20%;
+  position: relative;
+
+  .social-icons {
+    margin-top: 1.5rem;
+  }
+
+  .accordion__tab--header {
+    font-size: 1.8rem;
+  }
+
+  &__col-4 {
+    margin-bottom: 15rem;
+  }
+
+  &__col-4,
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__list {
+    &--item {
+      list-style: none;
+
+      &-link {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+  .content-list {
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    &__item {
+      list-style: none;
+    }
+
+    &__item:first-child {
+      margin-top: 1rem;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: inherit;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+.hotel-preview + footer {
+  margin-top: 0;
+}

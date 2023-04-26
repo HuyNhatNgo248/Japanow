@@ -1,0 +1,66 @@
+body {
+  /* parent element of all the elements  */
+  /* everything related to font should be put to the body tag */
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: 1.7;
+  color: $color-primary-black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+.heading-primary {
+  backface-visibility: hidden;
+  &--main {
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    line-height: 1.2;
+    margin-bottom: 1.7rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 2.8rem;
+
+  &--big {
+    font-size: 3.5rem;
+    font-weight: 800;
+    display: flex;
+    gap: 1rem;
+    p {
+      display: inline-block;
+    }
+
+    p:first-child {
+      color: $color-red-light-1;
+    }
+  }
+}
+
+.heading-tertiary {
+  &--main {
+    font-size: 2rem;
+  }
+
+  &--sub {
+    font-size: 1.8rem;
+  }
+}

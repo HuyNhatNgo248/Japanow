@@ -1,0 +1,27 @@
+extends ./base 
+include ./utils/_searchBarTop
+
+block content 
+  header.header__error
+    .navigation
+      a.navigation__logo(href="/") Japanow
+
+      +searchBarTop
+
+      ul.navigation__list.navigation__list--users-login
+        li.navigation__item
+          a.navigation__item--link(href='#') Register
+        li.navigation__item
+          a.navigation__item--link(href='#') Sign in
+
+  main.main 
+    .error   
+      h1.error__title=msg
+      h3.error__msg The page you're looking for doesn't exist, but we've got a lot of ideas for your next trip.
+    .button-wrapper
+      button.btn 
+        a(href="/") Back to homepage
+
+
+
+

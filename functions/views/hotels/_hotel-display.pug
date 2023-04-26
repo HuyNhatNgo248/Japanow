@@ -1,0 +1,101 @@
+include ./../utils/_accordion
+
+mixin nav-bar__dropdown(name, content)
+  +dropdown("", name, true, content)
+
+mixin hotel-skeleton 
+  .hotel-display__results
+    .img__container.skeleton.skeleton__img
+
+    .listing__title
+      .skeleton.skeleton--text.skeleton__text--big
+
+    .listing__info
+      .skeleton.skeleton--text
+      .skeleton.skeleton--text
+      .skeleton.skeleton--text
+      .skeleton.skeleton--text
+      .skeleton.skeleton--text
+      .skeleton.skeleton--text
+
+
+
+    .listing-price
+      .skeleton.skeleton--text
+      .skeleton.skeleton--text
+
+
+.hotel-display
+  .hotel-display__top
+    .wrapper   
+      p.results-count   
+        span.results-count__number
+        | 
+        span
+        | 
+        span.results-count__location
+
+      .sort-results
+        +nav-bar__dropdown("Hotel class", ["Hotel class", "Review", "Distance"])
+
+
+
+
+
+
+
+  .hotel-display__controller 
+    +accordion("Distance from", [], false, {headerCl: "controller__accordion--header"}, "Distance from")
+
+    //- +accordion("Price", [], false, {headerCl: "controller__accordion--header"}, "Price")
+
+    //- +accordion("Amenities", [], false, {headerCl: "controller__accordion--header"}, "Amenities")
+
+    //- +accordion("Accessibility", [], false, {headerCl: "controller__accordion--header"}, "Accessibility")
+
+    +accordion("Stars", [], false, {headerCl: "controller__accordion--header"}, "Stars")
+
+    +accordion("Language supported", [], false, {headerCl: "controller__accordion--header"}, "Language supported")
+
+    +accordion("Offers", [], false, {headerCl: "controller__accordion--header"}, "Offers")
+
+
+
+
+
+
+
+
+  .hotel-display__results--container
+    +hotel-skeleton 
+    +hotel-skeleton 
+    +hotel-skeleton 
+    +hotel-skeleton 
+    +hotel-skeleton 
+    +hotel-skeleton 
+    +hotel-skeleton 
+    +hotel-skeleton 
+    +hotel-skeleton 
+    +hotel-skeleton 
+    +hotel-skeleton
+
+  .hotel-display__pagination
+    button.btn.btn-prev
+      ion-icon.icon(name='chevron-back-outline')
+
+    .pagination
+      form.pagination__form
+        input.form__input(type='text' placeholder='1') 
+
+      span /
+      span.pagination__total 1
+
+    button.btn.btn-next.btn-active
+      ion-icon.icon(name='chevron-forward-outline')
+      
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+.navigation {
+  display: flex;
+  padding: 3rem 7rem 3rem 7rem;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 2rem;
+  color: $color-primary-white;
+
+  &__logo {
+    cursor: pointer;
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+  }
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  &__item {
+    border-radius: 1rem;
+    padding: 0.8rem 2rem;
+    background-color: rgba($color-grey-dark-1, 0.4);
+    transition: all 0.3s;
+    &--link {
+      color: inherit;
+      font-size: 1.6rem;
+      text-decoration: none;
+    }
+
+    &:hover {
+      transform: translateY(-5%);
+    }
+  }
+}

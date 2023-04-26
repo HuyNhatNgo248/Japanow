@@ -1,0 +1,46 @@
+include ./utils/_accordion
+
+mixin footer__list--item(text)
+  li.footer__list--item
+    a.footer__list--item-link(href='#')= text
+
+mixin footer__list--icon(text)
+  ion-icon.icon.icon-social(name=`logo-${text}`)
+
+
+footer
+  .footer
+
+    .footer__col-1
+      a.navigation__logo(href="/") Japanow
+      .social-icons
+        +footer__list--icon("instagram")
+        +footer__list--icon("facebook")
+        +footer__list--icon("twitter")
+        +footer__list--icon("youtube")
+
+    .footer__col-2
+      ul.footer__list
+        +footer__list--item("Help")
+        +footer__list--item("Privacy settings")
+        +footer__list--item("Log in")
+
+    .footer__col-3
+      ul.footer__list
+        +footer__list--item("Cookie policy")
+        +footer__list--item("Privacy policy")
+        +footer__list--item("Terms of service")
+        +footer__list--item("Company details")
+
+    .footer__col-4
+      +accordion("Explore", ["Country", "Regions", "Cities", "Hotels"], true, {liCl: "footer__item"})
+
+
+      +accordion("Company", ["About us", "Why Japanow?", "Media", "Our people", "Accesibility", "Sustainability", "Jobs"], true, {liCl: "footer__item"})
+      
+
+      +accordion("Partners", ["Work with us", "Advertise with us", "Travel insights"], true, {liCl: "footer__item"})
+
+  p.footer__text Book hotels and explore Japan made easier &copy; Japanow
+
+     

@@ -1,0 +1,53 @@
+include _dropdown
+include _checkbox
+include _rangeSlider
+
+mixin accordion(title, items, isLink,{headerCl = "", titleCl = "", panelCl = "", liCl = "", linkCl = "", btnCl = ""}, panelSubType)
+
+  .accordion-df 
+
+    div(class=`accordion-df__header ${headerCl}`)
+
+      p(class=`accordion-df__header--title ${titleCl}`)= title
+
+      ion-icon(class=`accordion-df__header--icon icon` name='chevron-up-outline')
+
+    ul(class=`accordion-df__panel ${panelCl}`)
+      each val in items 
+        if isLink
+          li(class=`accordion-df__panel--item ${liCl}`)
+            a(class=`accordion-df__panel--link ${linkCl}` href="#")= val
+
+      if panelSubType
+        li(class=`accordion-df__panel--item ${liCl}` id=`${panelSubType.toLowerCase().replaceAll(" ", "_")}`)
+
+          if panelSubType === "Distance from"
+            +rangeSlider(1, 50, "distance-from")
+
+          if panelSubType === "Price"
+            +rangeSlider(0, 1000, "price")
+
+          if panelSubType === "Amenities"
+            +checkbox( ['Spa on site', 'Wifi', 'Hot tub', 'Free airport transportation', 'Pool', 'Gym', 'Ocean view', 'Water park', 'Balcony or terrace', 'Kitchen kitchenette', 'Electric car', 'Parking', 'Crib', 'Restaurant in hotel', 'Pets', 'Washer dryer', 'Casino', 'Air conditioning'])
+
+          if panelSubType === "Accessibility"
+            +checkbox(['Sign language interpreter', 'Stair free path', 'Service animal', 'In room accessible', 'Roll in shower', 'Accessible bathroom', 'Elevator', 'Accessible parking'])
+
+          if panelSubType === "Stars"
+            +checkbox(['5 stars', '4 stars', '3 stars', '2 stars'])
+
+          if panelSubType === "Language supported"
+            +checkbox(['Japanese', 'English', 'Korean', 'Vietnamese', 'Chinese (Mandarin)', 'Chinese (Cantonese)', 'Filipino', 'Indonesian', 'French', 'German', 'Hindi', 'Italian', 'Lithuanian', 'Malay', 'Mongolian', 'Polish', 'Portuguese', 'Russian', 'Spanish', 'Swedish', 'Thai', 'Ukrainian', 'Urdu'])
+
+          if panelSubType === "Offers"
+            +checkbox(["Free cancel", "Pay later", "Loyalty earn"])
+
+
+
+
+
+
+
+
+
+
